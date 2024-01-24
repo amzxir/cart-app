@@ -1,0 +1,39 @@
+.bill {
+    position: sticky;
+    bottom: 0;
+    border-radius: 0px 0px 24px 24px;
+    background: #FF6161;
+    box-shadow: 0px 14px 80px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    padding: 1rem 0rem;
+}
+
+.title-price {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: .2rem;
+    /* 18.2px */
+}
+
+.bill-price {
+    color: #FFF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    font-weight: bolder;
+    /* 36px */
+}
+
+.br-20{
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 380px) {
+    .bill {
+        border-radius: 24px 24px 0px 0px;
+    }
+}

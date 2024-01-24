@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-touch-callout: none;
+  -ms-scroll-snap-coordinate: 0 0;
+  scroll-snap-coordinate: 0 0;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: none !important;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
