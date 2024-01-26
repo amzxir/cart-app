@@ -1,7 +1,11 @@
 import React from "react";
 import "./bill.css";
+import { useProductContext } from "../../context";
 
 const Bill = () => {
+
+    const { clearCart } = useProductContext();
+
     return (
         <div className="bill">
             <div className="container">
@@ -11,7 +15,7 @@ const Bill = () => {
                         <p className="bill-price mb-0">$171</p>
                     </div>
                     <div className="col-md-5">
-                        <button className="btn btn-light w-100 br-20">Delete Order</button>
+                        <a onClick={clearCart} className="btn btn-light w-100 br-20">Delete Order</a>
                     </div>
                 </div>
             </div>

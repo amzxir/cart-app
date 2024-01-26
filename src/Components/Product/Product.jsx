@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import data from "../../data";
 import "./product.css";
 import ProductItem from "../ProductItem/productItem";
+import { useProductContext } from "../../context";
 
 const Product = () => {
 
-    const [card, setCard] = useState(data);
-
+    const { card } = useProductContext()
     return (
         <div className="product">
             {card.map((i) => {
                 return (
-                    <ProductItem key={i.id} {...i}/>
+                    <ProductItem key={i.id} {...i} />
                 )
             })}
         </div>
