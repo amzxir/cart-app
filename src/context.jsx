@@ -12,14 +12,14 @@ const inisialState = {
 }
 
 const ProductProvider = ({ children }) => {
-    const [state , dispatch] = useReducer(reducer , inisialState)
+    const [state, dispatch] = useReducer(reducer, inisialState)
 
     const clearCart = () => {
-        dispatch({ type:'CLEAR_CART' })
+        dispatch({ type: 'CLEAR_CART' })
     }
 
-    return(
-        <Context.Provider value={{ ...state , clearCart }}>
+    return (
+        <Context.Provider value={{ ...state, clearCart }}>
             {children}
         </Context.Provider>
     )
@@ -29,4 +29,4 @@ const useProductContext = () => {
     return useContext(Context)
 }
 
-export {ProductProvider , useProductContext}
+export { ProductProvider, useProductContext }
