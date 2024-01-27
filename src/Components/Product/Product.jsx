@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import data from "../../data";
 import "./product.css";
 import ProductItem from "../ProductItem/productItem";
-import { useProductContext } from "../../context";
 
 const Product = () => {
 
-    const { card } = useProductContext()
+    const [card , setCard] = useState(data);
+
     return (
         <div className="product">
             {card.map((i) => {
