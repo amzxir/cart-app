@@ -7,14 +7,24 @@ const Product = () => {
 
     const { cart } = useCartContext();
 
+    const renderContent = () => {
+        if (cart.length === 0) {
+            return <p style={{ height:'550px' , marginTop:'20px' }}>cart is empty</p>
+        }
+
+        return (
+            <div className="product">
+                {cart.map((i) => {
+                    return (
+                        <ProductItem key={i.id} {...i} />
+                    )
+                })}
+            </div>
+        )
+    }
+
     return (
-        <div className="product">
-            {cart.map((i) => {
-                return (
-                    <ProductItem key={i.id} {...i} />
-                )
-            })}
-        </div>
+        renderContent()
     )
 }
 
