@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import data from "../../data";
 import "./product.css";
 import ProductItem from "../ProductItem/productItem";
+import { useCartContext } from "../../context";
 
 const Product = () => {
 
-    const [card , setCard] = useState(data);
+    const { cart } = useCartContext();
 
     return (
         <div className="product">
-            {card.map((i) => {
+            {cart.map((i) => {
                 return (
                     <ProductItem key={i.id} {...i} />
                 )
